@@ -1,4 +1,4 @@
 ALPINE
-80
-50
+100
+70
 Marteau
