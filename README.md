@@ -15,4 +15,4 @@ L'histoire est divisée en plusieur étape. On commance à l'étape 1. Il y aura
 
 BUG : Non dérangant mais a chaque fois qu'une étape est lu (un fichier contenant l'histoire), un fichier portant le numéro de l'étape sans extension et contenant les infos du joueur est crée.
 
-Lancer le programme. Dans l'invite de commance, au niveau du répertoire courant. Lancer la commande: make run
+Lancer le programme : Dans l'invite de commance, au niveau du répertoire courant. Lancer la commande: make puis make run.
