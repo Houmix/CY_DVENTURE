@@ -2,7 +2,7 @@
 
 //Ajoute d'un objet dans l'inventaire du hero
 int add_item(Hero* hero, char* itemName, char* SaveFileName) {
-    int ok=0;
+    
     FILE* SaveFile = fopen(SaveFileName, "r");
     if (SaveFile == NULL) {
         printf("Erreur lors de l'ouverture du fichier de sauvegarde.\n");
@@ -41,7 +41,12 @@ int add_item(Hero* hero, char* itemName, char* SaveFileName) {
         printf("3/ Supprimer : %s\n", item3);
         printf("4/ Ne pas prendre le nouvel item.\n");
         printf("Choisissez une option :\n");
-        scanf("%d", &choice);
+        while (scanf("%d", &choice) != 1) {
+            // Effacer le flux d'entrée en cas de saisie invalide
+            while (getchar() != '\n');
+            printf("Saisie invalide. Veuillez entrer un numéro valide : ");
+        }
+
         //choice de l'item à remplacer ou ne pas l'ajouter
         switch (choice) {
             case 1:
@@ -60,7 +65,7 @@ int add_item(Hero* hero, char* itemName, char* SaveFileName) {
                 // Ne rien faire pour l'option 4
                 break;
             default:
-                printf("choice de l'option incorrect.\n");
+                printf("Choix de l'option incorrect.\n");
                 continue; // Revenir au début de la boucle while
         }
         good = 0;
@@ -93,7 +98,6 @@ int change_stat(Hero* hero, char* bonus_name, int amount){
 
 //Tirage pour obtenir une puissante arme
 void draw(Hero* hero, int choiceNumber, Bonus* bonus, char* SaveFileName) {
-    int ok;
     //bonus->numChoices = 0;
     int drawNum=0;
     char itemName[20];
