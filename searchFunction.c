@@ -140,7 +140,6 @@ void processStepData(FILE* file, Step* currentStepData, Bonus* bonus, bool* hasE
 }
 
 void readStepDataFromFile(char* fileName, Step* currentStepData, Bonus* bonus, bool* hasChoices, bool* hasHeroVsBoss, bool* hasEvent, bool* hasBonus, bool* hasMonster, bool* hasExcalibure) {
-    printf("Ouvverture du fichier %s", fileName);
     FILE* file = fopen(fileName, "r");
     if (file == NULL) {
         printf("Impossible d'ouvrir le fichier %s\n", fileName);
