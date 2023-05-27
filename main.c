@@ -225,7 +225,7 @@ int main() {
             printCharByChar(currentStepData.event, 10000);
             printf("\n");
         } else {
-            printf("Rien à affichier pour cette étape.\n");
+            printf("Pas d'évenement pour cette étape.\n");
         }
 
         //Mise à jour des données du joueur
