@@ -177,7 +177,11 @@ int main() {
                 }
                 printf("Choix du bonus invalide. Veuillez entrer un numéro valide.\n");
                 printf("\nChoisissez un bonus : ");
-                scanf("%d", &userChoiceBonus);
+                while (scanf("%d", &userChoiceBonus) != 1){
+                    // Effacer le flux d'entrée en cas de saisie invalide
+                    while (getchar() != '\n');
+                    printf("Saisie invalide. Veuillez entrer un numéro valide : ");
+                }
             }
 
             applyChoiceBonuses(&hero, userChoiceBonus, &bonus, SaveFileName);
@@ -193,14 +197,23 @@ int main() {
                 printf("\nFaites votre choix : ");
                 scanf("%d", &userChoiceBonus);
                 
+                
+
+
                 // Vérifier la validité du choice
                 while(1) {
-                    if (userChoiceBonus >= 1 && userChoiceBonus <= (bonus.numChoices+1)){
+                    if (userChoiceBonus >= 1 && userChoiceBonus <= (bonus.numChoices-1)){
                         break;
                     }
                     printf("Choix du bonus invalide. Veuillez entrer un numéro valide.\n");
                     printf("\nChoisissez un bonus : ");
-                    scanf("%d", &userChoiceBonus);
+                    
+                    while (scanf("%d", &userChoiceBonus) != 1){
+                        // Effacer le flux d'entrée en cas de saisie invalide
+                        while (getchar() != '\n');
+                        printf("Saisie invalide. Veuillez entrer un numéro valide : ");
+                    }
+                    
                 }
                 draw(&hero, userChoiceBonus, &bonus, SaveFileName);
                 
@@ -232,19 +245,13 @@ int main() {
                
             }
             printf("\nChoisissez une option pour la suite : \n");
-            scanf("%d", &userChoice);
-            printf("%d",userChoice);
-            
-            // Vérifier la validité du choice
-            while(1) {
-                printf("%d\n",userChoice);
-                if (userChoice >= 1 && userChoice <= currentStepData.numChoices){
-                    break;
-                }
-                printf("\nChoisissez une option valide: ");
-                scanf("%d", &userChoice);
-                printf("Choix invalide. Veuillez entrer un numéro valide.\n");
+            while ((scanf("%d", &userChoice) != 1) || (userChoice < 1 || userChoice > currentStepData.numChoices)) {
+                // Effacer le flux d'entrée en cas de saisie invalide
+                while (getchar() != '\n');
+                printf("Saisie invalide. Veuillez entrer un numéro valide : ");
             }
+
+        
             
             //Obligé de combattre le boss
         } else if (hasHeroVsBoss){
