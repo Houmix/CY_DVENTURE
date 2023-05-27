@@ -10,3 +10,7 @@ Excalibure
 150
 Mareau
 70
+Vide
+0
+Armure en cuivre
+30
