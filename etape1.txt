@@ -1,8 +1,8 @@
 # Description
-Il était une fois, dans un monde mystique, un héros qui se réveilla au cœur de la forêt. Son but ultime était de vaincre le redoutable boss de la forêt et de rétablir la paix dans la contrée. Le destin du royaume reposait entre ses mains. Vous vous réveillez dans une forêt dense. Devant vous, un sentier sinueux mène plus profondément dans les bois.
+Il etait une fois, dans un monde mystique, un hero qui se reveilla au cœur de la foret. Son but ultime etait de vaincre le redoutable boss de la foret et de retablir la paix dans la contree. Le destin du royaume reposait entre ses mains. Vous vous reveillez dans une foret dense. Devant vous, un sentier sinueux mene plus profondement dans les bois.
 
 # Evenement
-Statistique : +10 points de santé
+Debut de l'aventure
 
 # Choix
 1. Foncer vers le boss
