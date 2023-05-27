@@ -1,6 +1,5 @@
 #include "structures.h"
 
-
 int searchTag(char* Tag, char* NameFile, Step* currentStepData) {
     FILE* file = fopen(NameFile, "r");
 
@@ -9,26 +8,23 @@ int searchTag(char* Tag, char* NameFile, Step* currentStepData) {
         return 0;
     }
 
-    char* line = NULL; // Pointeur initialisé à NULL
-    size_t lineSize = 0; // Taille initiale de la ligne
+    char line[1000]; // Taille fixe pour la ligne
 
     // Lire la description
-    while (getline(&line, &lineSize, file) != -1) {
+    while (fgets(line, sizeof(line), file) != NULL) {
         if (strstr(line, Tag) != NULL) {
             // La ligne correspondant au tag est trouvée
             break;
         }
     }
     fgets(line, sizeof(line), file);
-    getline(&line, &lineSize, file);
     // Lecture de la ligne suivante qui contient le texte du tag
     sscanf(line, "%[^\n]", currentStepData->description);
-    //printf("voici le texe de la description : %s", currentStepData->description);
-    free(line); // Libérer la mémoire allouée dynamiquement
 
     fclose(file);
     return 1;
 }
+
 
 
 void searchEvent(FILE* file, Step* currentStepData, bool* hasEvent) {
@@ -64,6 +60,7 @@ void searchExcalibure(FILE* file, Bonus* bonus, bool* hasExcalibure) {
     char line[1000];
     bonus->numChoices = 0;
     *hasExcalibure = true;
+    fgets(bonus->description, sizeof(bonus->description), file);
     while (fgets(line, sizeof(line), file) != NULL) {
         if (line[0] == '\n') {
             break;  // Quitter la boucle interne si on atteint une ligne vide
@@ -72,6 +69,7 @@ void searchExcalibure(FILE* file, Bonus* bonus, bool* hasExcalibure) {
             bonus->choices[bonus->numChoices].description);
         bonus->numChoices++; // Incrémenter numChoices ici
     }
+    
 }
 
 
@@ -131,6 +129,7 @@ void processStepData(FILE* file, Step* currentStepData, Bonus* bonus, bool* hasE
         } else if (strstr(line, "# Bonus") != NULL) {
             searchBonus(file, bonus, hasBonus);
         } else if (strstr(line, "# Charlatant") != NULL) {
+
             searchExcalibure(file, bonus, hasExcalibure);
         } else if (strstr(line, "# Monstre") != NULL) {
             searchMonster(file, currentStepData, hasMonster);

@@ -1,4 +1,5 @@
 #include "function.h"
+
 int main() {
     char stepFileName[20];
     char SaveFileName[20];
@@ -187,7 +188,7 @@ int main() {
             applyChoiceBonuses(&hero, userChoiceBonus, &bonus, SaveFileName);
 
         } else if (hasExcalibure) {
-            
+            printCharByChar(bonus.description, 10000);
             for (int i = 1; i < bonus.numChoices; i++) {
                     printf("%d.", bonus.choices[i].number);
                     printCharByChar(bonus.choices[i].description, 10000);
