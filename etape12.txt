@@ -1,0 +1,12 @@
+
+# Description
+En explorant les profondeurs de la forêt, notre héros se retrouva face à un mystérieux charlatan. Ce dernier tenta de vendre au héros une chance d'obtenir Excalibure.
+
+# Charlatant
+"Tente ta chance et obtient via ce tirage excalibure pour tuer ton ennemi en 1 coup !"
+1. Tirage
+2. Non merci
+
+# Choix
+1. Aller au donjon
+2. Continuer dans les profondeur de la forêt

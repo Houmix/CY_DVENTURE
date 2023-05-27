@@ -1,0 +1,13 @@
+# Description
+Soudain, un rugissement retentit dans les bois. C'est le boss !Le hero s'élança vers lui mais un terrible monstre (sûrement un sous-fifre) se dressa devant le héros, prêt à l'attaquer. Le héros sortit son épée, prêt à engager le combat.
+
+# Monstre
+Mmmmh, le combat commence...
+
+# Bonus
+1. Statistique : PV +40
+2. Inventaire : Epee en fer
+
+#Choix
+1. Combattre le boss
+2. Chercher d'autres armes

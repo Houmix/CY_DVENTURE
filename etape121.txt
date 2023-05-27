@@ -1,0 +1,11 @@
+# Description
+A l'entrée du donjon, le hero rencontre un charlatan, il lui vend du rêve ! Quelle sera son choix...
+
+# Charlatant :
+"Tente ta chance et obtient via ce tirage excalibure pour tuer ton ennemi en 1 coup !"
+1. Tirage
+2. Non merci.
+
+# Choix
+1. Aller au sommet du donjon
+2. Faire demi-tour et entrer dans la forêt

@@ -1,0 +1,11 @@
+# Description
+Soudain, un rugissement retentit dans les bois. C'est le boss !Le hero s'élança vers lui mais un terrible monstre (sûrement un sous-fifre) se dressa devant le héros, prêt à l'attaquer. Le héros sortit son épée, prêt à engager le combat.
+
+# Bonus
+1. Statistique : PV +10
+2. Statistique : Force +10
+
+# Choix
+1. Combattre le boss
+
+

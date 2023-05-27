@@ -1,0 +1,14 @@
+
+# Description
+Durant l'escapade du hero dans son donjon, il s'efforçât de continuer jusqu'au sommet pour devenir plus puissant. Ah, un monstre se trouve au sommet...
+
+# Monstre
+Mmmmh, le combat commence...
+
+# Bonus
+1. Statistique : Force +30
+2. Inventaire : Epee en diamant
+
+# Choix
+1. Se reposer
+2. Sortir du donjon et entrer dans la forêt

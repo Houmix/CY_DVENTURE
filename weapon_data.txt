@@ -1,0 +1,12 @@
+Epee en bois
+40
+Epee en fer
+40
+Epee en or
+40
+Epee en diamant
+70
+Excalibure
+150
+Mareau
+70
