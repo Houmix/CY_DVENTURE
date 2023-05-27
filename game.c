@@ -102,9 +102,10 @@ void draw(Hero* hero, int choiceNumber, Bonus* bonus, char* SaveFileName) {
     int drawNum=0;
     char itemName[20];
     strcpy(itemName, "Excalibure");
-    hero->gold -= GoldgoldDraw;
+    
 
     if (strstr(bonus->choices[choiceNumber].description, "Tirage") != NULL) {
+        hero->gold -= GoldgoldDraw;
         //Tirage au sort pour excalibure
         printf("Choisissez un nombre entre 1 et 10 pour le tirage :\n");
         scanf("%d", &drawNum);
